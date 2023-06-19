@@ -1,15 +1,14 @@
 package com.example.millionairegameclient.ui.bluetooth
 
-import android.bluetooth.BluetoothDevice
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import android.bluetooth.BluetoothDevice
 import com.example.millionairegameclient.R
 
 class BtDeviceAdapter(private val onClick: (BluetoothDevice) -> Unit) :
@@ -30,6 +29,7 @@ class BtDeviceAdapter(private val onClick: (BluetoothDevice) -> Unit) :
             }
         }
 
+        @SuppressLint("MissingPermission")
         fun bind(device: BluetoothDevice) {
             selectedDevice = device
             deviceName.text = device.name
@@ -49,7 +49,7 @@ class BtDeviceAdapter(private val onClick: (BluetoothDevice) -> Unit) :
 
     override fun getItemCount(): Int = devices.size
 
-    fun updateDevices(update: List<BluetoothDevice>) {
+    fun updateDevices(update: List<android.bluetooth.BluetoothDevice>) {
         devices = update
         notifyDataSetChanged()
     }

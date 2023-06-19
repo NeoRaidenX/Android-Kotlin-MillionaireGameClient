@@ -3,11 +3,31 @@ package com.example.millionairegameclient.ui.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.millionairegameclient.ui.bluetooth.BluetoothDataRepository
+import com.example.millionairegameclient.ui.settings.SettingsEnum
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val dataRepository: BluetoothDataRepository
+): ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    companion object {
+        private const val TAG = "HomeViewModel"
     }
-    val text: LiveData<String> = _text
+
+    fun sendAction(option: MainOptionsEnum) {
+        dataRepository.sendMainAction(option)
+    }
+
+    fun sendShowOption(position: Int) {
+        dataRepository.sendMainShowOption(position)
+    }
+
+    fun sendMarkOption(position: Int) {
+        dataRepository.sendMainMarkOption(position)
+    }
+
+
 }

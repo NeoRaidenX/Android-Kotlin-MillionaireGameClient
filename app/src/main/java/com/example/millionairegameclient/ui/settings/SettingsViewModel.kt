@@ -1,13 +1,20 @@
-package com.example.millionairegameclient.ui.lifelines
+package com.example.millionairegameclient.ui.settings
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.millionairegameclient.ui.bluetooth.BluetoothDataRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class SettingsViewModel : ViewModel() {
+@HiltViewModel
+class SettingsViewModel @Inject constructor(
+    private val dataRepository: BluetoothDataRepository
+): ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is settings Fragment"
+    companion object {
+        private const val TAG = "SettingsViewModel"
     }
-    val text: LiveData<String> = _text
+
+    fun sendAction(option: SettingsEnum) {
+        dataRepository.sendSettingsAction(option)
+    }
 }
