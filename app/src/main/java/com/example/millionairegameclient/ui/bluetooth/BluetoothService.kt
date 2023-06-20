@@ -92,13 +92,13 @@ class BluetoothService: Service() {
             Actions.LIFE_SHOW_50 -> {
 
             }
-            Actions.LIFE_TOGGLE_FORM -> {
+            Actions.LIFE_TOGGLE_PHONE -> {
 
             }
             Actions.LIFE_TOGGLE_CHART -> {
 
             }
-            Actions.LIFE_TOGGLE_TIMER -> {
+            Actions.LIFE_TOGGLE_GROUP -> {
 
             }
             Actions.LIFE_TOGGLE_50 -> {

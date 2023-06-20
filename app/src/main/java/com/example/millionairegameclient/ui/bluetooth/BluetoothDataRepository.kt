@@ -336,14 +336,20 @@ class BluetoothDataRepository(
             MainOptionsEnum.ShowAnswer -> {
                 sendAction(Actions.MAIN_SHOW_ANSWER)
             }
-            MainOptionsEnum.ShowReward -> {
+            MainOptionsEnum.NavigateReward -> {
                 sendAction(Actions.NAVIGATE_REWARD)
-            }
-            MainOptionsEnum.ChangeNext -> {
-                sendAction(Actions.MAIN_CHANGE_NEXT_Q)
             }
             MainOptionsEnum.NavigateUp -> {
                 sendAction(Actions.NAVIGATE_UP)
+            }
+            MainOptionsEnum.NavigateClock -> {
+                sendAction(Actions.NAVIGATE_CLOCK)
+            }
+            MainOptionsEnum.NavigateChart -> {
+                sendAction(Actions.NAVIGATE_CHART)
+            }
+            MainOptionsEnum.NavigateTable -> {
+                sendAction(Actions.NAVIGATE_TABLE)
             }
             else -> {}
         }
@@ -372,23 +378,17 @@ class BluetoothDataRepository(
             LifelinesEnum.ShowPeopleForm -> {
                 sendAction(Actions.LIFE_SHOW_PPL_FORM)
             }
-            LifelinesEnum.ShowPeopleDiagram -> {
-                sendAction(Actions.LIFE_SHOW_PPL_CHOICE)
-            }
-            LifelinesEnum.ShowTimer -> {
-                sendAction(Actions.LIFE_SHOW_CLOCK)
-            }
             LifelinesEnum.Show50 -> {
                 sendAction(Actions.LIFE_SHOW_50)
             }
-            LifelinesEnum.TogglePeopleForm -> {
-                sendAction(Actions.LIFE_TOGGLE_FORM)
+            LifelinesEnum.TogglePhone -> {
+                sendAction(Actions.LIFE_TOGGLE_PHONE)
             }
-            LifelinesEnum.TogglePeopleDiagram -> {
+            LifelinesEnum.ToggleChart -> {
                 sendAction(Actions.LIFE_TOGGLE_CHART)
             }
-            LifelinesEnum.ToggleTimer -> {
-                sendAction(Actions.LIFE_TOGGLE_TIMER)
+            LifelinesEnum.ToggleGroup -> {
+                sendAction(Actions.LIFE_TOGGLE_GROUP)
             }
             LifelinesEnum.Toggle50 -> {
                 sendAction(Actions.LIFE_TOGGLE_50)
@@ -400,9 +400,6 @@ class BluetoothDataRepository(
         when (option) {
             SettingsEnum.ShowOpening -> {
                 sendAction(Actions.CONFIG_SHOW_OPENING)
-            }
-            SettingsEnum.ShowTable -> {
-                sendAction(Actions.CONFIG_SHOW_TABLE)
             }
             SettingsEnum.SelectCurrent -> {
                 sendAction(Actions.CONFIG_SELECT_QUEST)

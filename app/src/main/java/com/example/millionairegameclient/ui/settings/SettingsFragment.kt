@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.millionairegameclient.databinding.FragmentSettingsBinding
 import kotlinx.coroutines.launch
@@ -32,7 +33,7 @@ class SettingsFragment : Fragment() {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
         val recyclerview = binding.recyclerview
-        recyclerview.layoutManager = LinearLayoutManager(requireContext())
+        recyclerview.layoutManager = GridLayoutManager(requireContext(), 2)
         val mainAdapter = SettingsAdapter { optionSelected ->
             lifecycleScope.launch {
                 viewModel.sendAction(optionSelected)

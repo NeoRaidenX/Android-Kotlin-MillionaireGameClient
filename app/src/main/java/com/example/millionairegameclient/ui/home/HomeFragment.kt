@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.millionairegameclient.R
 import com.example.millionairegameclient.databinding.FragmentHomeBinding
@@ -34,8 +35,8 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         val recyclerview = binding.recyclerview
-        recyclerview.layoutManager = LinearLayoutManager(requireContext())
-        val mainAdapter = MainAdapter { optionSelected ->
+        recyclerview.layoutManager = GridLayoutManager(requireContext(), 2)
+        val mainAdapter = MainAdapter(requireContext()) { optionSelected ->
 
             when(optionSelected) {
                 MainOptionsEnum.ShowOption -> showOptionAlertDialog(false)

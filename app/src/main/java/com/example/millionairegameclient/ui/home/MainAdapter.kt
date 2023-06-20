@@ -1,11 +1,14 @@
 package com.example.millionairegameclient.ui.home
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.millionairegameclient.R
 import com.example.millionairegameclient.databinding.RowMainBinding
 
 class MainAdapter(
+    private val context: Context,
     private var onItemClicked: ((option: MainOptionsEnum) -> Unit)
 ): RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
@@ -15,6 +18,19 @@ class MainAdapter(
             rowMainTitle.text = option.title
             root.setOnClickListener {
                 onItemClicked(option)
+            }
+            when (option) {
+                MainOptionsEnum.LoadQuestion -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.teal_700))
+                MainOptionsEnum.ShowQuestion -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.purple_200))
+                MainOptionsEnum.ShowOption -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.white))
+                MainOptionsEnum.MarkOption -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.reward_bg))
+                MainOptionsEnum.ShowAnswer -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.answer))
+                MainOptionsEnum.ShowAllOptions -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.gray))
+                MainOptionsEnum.NavigateReward -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                MainOptionsEnum.NavigateClock -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                MainOptionsEnum.NavigateChart -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                MainOptionsEnum.NavigateTable -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                MainOptionsEnum.NavigateUp -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.pink))
             }
         }
     }

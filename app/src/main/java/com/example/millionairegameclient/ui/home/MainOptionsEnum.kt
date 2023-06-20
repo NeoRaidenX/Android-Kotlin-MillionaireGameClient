@@ -11,7 +11,10 @@ enum class MainOptionsEnum (
     ShowOption( "Show Option", R.drawable.ic_main_show_option),
     MarkOption("Mark Option", R.drawable.ic_main_mark_option),
     ShowAnswer("Show Answer", R.drawable.ic_main_show_answer),
-    ShowReward("Show Reward", R.drawable.ic_main_show_reward),
-    ChangeNext("Next Question", R.drawable.ic_main_change_next),
+    ShowAllOptions("Show All answers", R.drawable.ic_main_change_next),
+    NavigateReward("Navigate Reward", R.drawable.ic_main_show_reward),
+    NavigateClock("Navigate Clock", R.drawable.ic_clock),
+    NavigateChart("Navigate Chart", R.drawable.ic_chart),
+    NavigateTable("Navigate Table", R.drawable.ic_table),
     NavigateUp("Navigate Up", R.drawable.ic_nav_up)
 }

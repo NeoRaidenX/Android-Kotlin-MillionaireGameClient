@@ -1,11 +1,14 @@
 package com.example.millionairegameclient.ui.lifelines
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.millionairegameclient.R
 import com.example.millionairegameclient.databinding.RowMainBinding
 
 class LifelineAdapter(
+    private val context: Context,
     private var onItemClicked: ((option: LifelinesEnum) -> Unit)
 ): RecyclerView.Adapter<LifelineAdapter.ViewHolder>() {
 
@@ -15,6 +18,18 @@ class LifelineAdapter(
             rowMainTitle.text = option.title
             root.setOnClickListener {
                 onItemClicked(option)
+            }
+            when(option) {
+                LifelinesEnum.ShowPeopleForm,
+                LifelinesEnum.Show50 -> {
+                    binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.blue))
+                }
+                LifelinesEnum.TogglePhone,
+                LifelinesEnum.Toggle50,
+                LifelinesEnum.ToggleGroup,
+                LifelinesEnum.ToggleChart -> {
+                    binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.pink))
+                }
             }
         }
     }
