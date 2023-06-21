@@ -14,7 +14,8 @@ enum class MainOptionsEnum (
     ShowAllOptions("Show All answers", R.drawable.ic_main_change_next),
     NavigateReward("Navigate Reward", R.drawable.ic_main_show_reward),
     NavigateClock("Navigate Clock", R.drawable.ic_clock),
-    NavigateChart("Navigate Chart", R.drawable.ic_chart),
+    NavigateChart("Navigate Person", R.drawable.round_person),
     NavigateTable("Navigate Table", R.drawable.ic_table),
+    NavigateNext("Navigate Next", R.drawable.baseline_navigate_next),
     NavigateUp("Navigate Up", R.drawable.ic_nav_up)
 }

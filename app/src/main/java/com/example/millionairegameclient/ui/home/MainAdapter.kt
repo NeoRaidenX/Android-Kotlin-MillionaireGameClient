@@ -30,6 +30,7 @@ class MainAdapter(
                 MainOptionsEnum.NavigateClock -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
                 MainOptionsEnum.NavigateChart -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
                 MainOptionsEnum.NavigateTable -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                MainOptionsEnum.NavigateNext -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
                 MainOptionsEnum.NavigateUp -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.pink))
             }
         }

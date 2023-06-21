@@ -336,6 +336,9 @@ class BluetoothDataRepository(
             MainOptionsEnum.ShowAnswer -> {
                 sendAction(Actions.MAIN_SHOW_ANSWER)
             }
+            MainOptionsEnum.ShowAllOptions -> {
+                sendAction(Actions.MAIN_SHOW_ALL_OPTIONS)
+            }
             MainOptionsEnum.NavigateReward -> {
                 sendAction(Actions.NAVIGATE_REWARD)
             }
@@ -350,6 +353,9 @@ class BluetoothDataRepository(
             }
             MainOptionsEnum.NavigateTable -> {
                 sendAction(Actions.NAVIGATE_TABLE)
+            }
+            MainOptionsEnum.NavigateNext -> {
+                sendAction(Actions.NAVIGATE_NEXT)
             }
             else -> {}
         }

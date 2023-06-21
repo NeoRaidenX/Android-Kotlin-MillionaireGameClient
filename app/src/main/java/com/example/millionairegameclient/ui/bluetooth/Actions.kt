@@ -24,6 +24,8 @@ object Actions {
     const val MAIN_SHOW_ANSWER = prefix + "showans"
     const val MAIN_SHOW_REWARD = prefix + "showrew"
     const val MAIN_CHANGE_NEXT_Q = prefix + "changenext"
+    const val MAIN_SHOW_ALL_OPTIONS = prefix + "showallopt"
+
     const val LIFE_SHOW_PPL_FORM = prefix + "showpplform"
     const val LIFE_SHOW_PPL_CHOICE = prefix + "showpplchoice"
     const val LIFE_SHOW_CLOCK = prefix + "showclock"
@@ -32,6 +34,7 @@ object Actions {
     const val LIFE_TOGGLE_CHART = prefix + "togglelifechart"
     const val LIFE_TOGGLE_PHONE = prefix + "togglelifephone"
     const val LIFE_TOGGLE_50 = prefix + "togglelife50"
+
     const val CONFIG_SHOW_OPENING = prefix + "showop"
     const val CONFIG_SHOW_TABLE = prefix + "showtable"
     const val CONFIG_SELECT_QUEST = prefix + "selectquest"
@@ -44,6 +47,7 @@ object Actions {
     const val NAVIGATE_REWARD = prefix + "nav_reward"
     const val NAVIGATE_CHART = prefix + "nav_chart"
     const val NAVIGATE_CLOCK = prefix + "nav_clock"
+    const val NAVIGATE_NEXT = prefix + "nav_next"
     const val PLAY_CLOCK = prefix + "play_clock"
 
     const val ERROR = prefix + "error"
