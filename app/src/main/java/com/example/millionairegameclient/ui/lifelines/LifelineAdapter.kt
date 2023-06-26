@@ -30,6 +30,9 @@ class LifelineAdapter(
                 LifelinesEnum.ToggleChart -> {
                     binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.pink))
                 }
+                LifelinesEnum.ShowNextRewardOnTable -> {
+                    binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.yellow))
+                }
             }
         }
     }

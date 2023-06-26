@@ -327,9 +327,9 @@ class BluetoothDataRepository(
 
     fun sendMainAction(option: MainOptionsEnum) {
         when (option) {
-            MainOptionsEnum.LoadQuestion -> {
+            /*MainOptionsEnum.LoadQuestion -> {
                 sendAction(Actions.MAIN_LOAD_QUESTION)
-            }
+            }*/
             MainOptionsEnum.ShowQuestion -> {
                 sendAction(Actions.MAIN_SHOW_QUESTION)
             }
@@ -379,6 +379,10 @@ class BluetoothDataRepository(
         }
     }
 
+    fun sendCurrent(position: Int) {
+        sendAction(Actions.CONFIG_SELECT_QUEST + "|" + position)
+    }
+
     fun sendLifelineAction(option: LifelinesEnum) {
         when (option) {
             LifelinesEnum.ShowPeopleForm -> {
@@ -399,6 +403,9 @@ class BluetoothDataRepository(
             LifelinesEnum.Toggle50 -> {
                 sendAction(Actions.LIFE_TOGGLE_50)
             }
+            LifelinesEnum.ShowNextRewardOnTable -> {
+                sendAction(Actions.LIFE_TABLE_SHOW_REWARD)
+            }
         }
     }
 
@@ -413,6 +420,7 @@ class BluetoothDataRepository(
             SettingsEnum.ShowCurrentQuestion -> {
                 sendAction(Actions.CONFIG_NAV_QUEST)
             }
+            SettingsEnum.ResetUI -> sendAction(Actions.CONFIG_RESET_UI)
         }
     }
 

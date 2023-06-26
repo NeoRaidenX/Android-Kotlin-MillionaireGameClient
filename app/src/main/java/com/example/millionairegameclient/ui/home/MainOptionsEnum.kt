@@ -6,7 +6,6 @@ enum class MainOptionsEnum (
     val title: String,
     val drawableId: Int
     ) {
-    LoadQuestion("Load Question", R.drawable.ic_load),
     ShowQuestion("Show Question", R.drawable.ic_main_show_question),
     ShowOption( "Show Option", R.drawable.ic_main_show_option),
     MarkOption("Mark Option", R.drawable.ic_main_mark_option),

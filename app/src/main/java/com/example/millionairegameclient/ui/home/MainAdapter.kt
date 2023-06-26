@@ -20,7 +20,7 @@ class MainAdapter(
                 onItemClicked(option)
             }
             when (option) {
-                MainOptionsEnum.LoadQuestion -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.teal_700))
+                //MainOptionsEnum.LoadQuestion -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.teal_700))
                 MainOptionsEnum.ShowQuestion -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.purple_200))
                 MainOptionsEnum.ShowOption -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.white))
                 MainOptionsEnum.MarkOption -> binding.cardview.setCardBackgroundColor(context.resources.getColor(R.color.reward_bg))

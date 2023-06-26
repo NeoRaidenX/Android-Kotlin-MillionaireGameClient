@@ -8,6 +8,7 @@ enum class SettingsEnum (
     ) {
     ShowOpening("Show opening", R.drawable.ic_opening),
     SelectCurrent("Select current question", R.drawable.ic_question),
-    ShowCurrentQuestion("Navigate to question", R.drawable.ic_dashboard_black_24dp)
+    ShowCurrentQuestion("Navigate to question", R.drawable.ic_dashboard_black_24dp),
+    ResetUI("Reset UI", R.drawable.ic_phone)
 
 }

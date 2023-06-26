@@ -1,5 +1,7 @@
 package com.example.millionairegameclient.ui.settings
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.millionairegameclient.R
 import com.example.millionairegameclient.databinding.FragmentSettingsBinding
 import kotlinx.coroutines.launch
 
@@ -36,10 +39,27 @@ class SettingsFragment : Fragment() {
         recyclerview.layoutManager = GridLayoutManager(requireContext(), 2)
         val mainAdapter = SettingsAdapter { optionSelected ->
             lifecycleScope.launch {
-                viewModel.sendAction(optionSelected)
+
+                when (optionSelected) {
+                    SettingsEnum.SelectCurrent -> {
+                        showOptionAlertDialog()
+                    }
+                    else -> {
+                        viewModel.sendAction(optionSelected)
+                    }
+                }
+
             }
         }
         recyclerview.adapter = mainAdapter
         return binding.root
+    }
+
+    private fun showOptionAlertDialog() {
+        AlertDialog.Builder(requireContext())
+            .setItems(R.array.current) { dialogInterface: DialogInterface, position: Int ->
+                viewModel.sendCurrent(position)
+            }
+            .show()
     }
 }

@@ -17,4 +17,8 @@ class SettingsViewModel @Inject constructor(
     fun sendAction(option: SettingsEnum) {
         dataRepository.sendSettingsAction(option)
     }
+
+    fun sendCurrent(position: Int) {
+        dataRepository.sendCurrent(position)
+    }
 }

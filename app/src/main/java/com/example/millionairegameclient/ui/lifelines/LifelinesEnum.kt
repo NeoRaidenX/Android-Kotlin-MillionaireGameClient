@@ -12,5 +12,7 @@ enum class LifelinesEnum (
     TogglePhone("Toggle Phone", R.drawable.ic_phone),
     Toggle50("Toggle 50/50", R.drawable.ic_balance),
     ToggleGroup("Toggle group", R.drawable.outline_groups),
-    ToggleChart("Toggle Chart", R.drawable.chart)
+    ToggleChart("Toggle Chart", R.drawable.chart),
+
+    ShowNextRewardOnTable("Show next reward", R.drawable.ic_main_show_reward)
 }

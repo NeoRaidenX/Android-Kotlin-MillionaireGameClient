@@ -34,11 +34,13 @@ object Actions {
     const val LIFE_TOGGLE_CHART = prefix + "togglelifechart"
     const val LIFE_TOGGLE_PHONE = prefix + "togglelifephone"
     const val LIFE_TOGGLE_50 = prefix + "togglelife50"
+    const val LIFE_TABLE_SHOW_REWARD = prefix + "showtablerew"
 
     const val CONFIG_SHOW_OPENING = prefix + "showop"
     const val CONFIG_SHOW_TABLE = prefix + "showtable"
     const val CONFIG_SELECT_QUEST = prefix + "selectquest"
     const val CONFIG_NAV_QUEST = prefix + "nav_quest"
+    const val CONFIG_RESET_UI = prefix + "resetui"
 
     const val NAVIGATE_UP = prefix + "nav_up"
     const val NAVIGATE_OPEN = prefix + "nav_op"
